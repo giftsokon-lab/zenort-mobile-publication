@@ -3,60 +3,93 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071a2b">
+  <meta name="description" content="ZENORT Community Publication — mobile-first community intelligence pilot.">
   <title>ZENORT — Community Publication</title>
-  <meta name="description" content="ZENORT listens to what people notice, understand and experience in their communities.">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-<header>
-  <a class="logo" href="#">ZENORT</a>
-  <span>COMMUNITY PUBLICATION</span>
-</header>
-
-<main>
-  <section class="cover">
-    <div class="eyebrow">ZENORT • MOBILE PUBLICATION</div>
-    <h1>What needs attention?</h1>
-    <p class="lead">Every community has things people notice before institutions do.</p>
-    <a class="button" href="#publication">Read publication</a>
-  </section>
-
-  <article id="publication" class="publication">
-    <div class="eyebrow">ZENORT PUBLICATION</div>
-    <h2>Listening begins with noticing.</h2>
-    <p>A broken service. A promising idea. A place that needs attention. A problem affecting young people. A resource that could be used better.</p>
-    <p>ZENORT begins by listening.</p>
-    <p>This publication is part of a pilot exploring how people understand, experience and respond to issues around them.</p>
-    <p>There are no right answers. What matters is what you actually observe, think and experience.</p>
-
-    <div class="prompt">
-      <h2>Now tell ZENORT what you think.</h2>
-      <p>What is one thing in your community that needs attention, opportunity or understanding?</p>
-      <a class="button" href="#respond">Respond</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="./">
+        <span class="brand-mark">Z</span><span>ZENORT</span>
+        <small>COMMUNITY PUBLICATION</small>
+      </a>
+      <span class="pilot-badge">MOBILE PILOT</span>
     </div>
-  </article>
+  </header>
 
-  <section id="respond" class="card">
-    <div class="eyebrow">YOUR RESPONSE</div>
-    <h2>What do you think?</h2>
-    <p>There are no right answers. Tell us what you actually observe or experience.</p>
-    <form id="responseForm">
-      <textarea id="response" rows="7" required placeholder="Write your response..."></textarea>
-      <label class="check">
-        <input id="consent" type="checkbox" required>
-        I agree that this response may be used for the ZENORT pilot.
-      </label>
-      <button type="submit">Submit response</button>
-    </form>
-    <div id="result" aria-live="polite"></div>
-  </section>
+  <main>
+    <section class="hero wrap">
+      <div class="eyebrow">LISTENING • NOTICING • UNDERSTANDING</div>
+      <h1>What needs<br><span>attention?</span></h1>
+      <p class="lead">Every community has things people notice before institutions do.</p>
+      <a class="primary-btn" href="#respond">Tell ZENORT what you think <span>↓</span></a>
+    </section>
 
-  <section class="card small">
-    <h2>About the pilot</h2>
-    <p>ZENORT is being tested with real people to understand how a community publication can listen, capture and learn from human response.</p>
-  </section>
-</main>
+    <section class="intro wrap">
+      <div class="section-label">ZENORT PUBLICATION</div>
+      <h2>Listening begins with noticing.</h2>
+      <p>A broken service. A promising idea. A place that needs attention. A problem affecting young people. A resource that could be used better.</p>
+      <p><strong>ZENORT begins by listening.</strong></p>
+      <p>This publication is part of a pilot exploring how people understand, experience and respond to issues around them.</p>
+      <div class="notice"><strong>There are no right answers.</strong><br>What matters is what you actually observe, think and experience.</div>
+    </section>
 
-<script src="app.js"></script>
+    <section id="respond" class="response-section">
+      <div class="wrap">
+        <div class="section-label">YOUR RESPONSE</div>
+        <h2>What do you think?</h2>
+        <p class="muted">Tell us what you actually observe or experience.</p>
+
+        <form id="responseForm" class="response-card">
+          <label for="response">What is one thing in your community that needs attention, opportunity or understanding?</label>
+          <textarea id="response" name="response" maxlength="2000" required placeholder="Write your response..."></textarea>
+
+          <div class="form-grid">
+            <div>
+              <label for="location">Community / location <span>(optional)</span></label>
+              <input id="location" name="location" maxlength="120" placeholder="e.g. Chibombo">
+            </div>
+            <div>
+              <label for="sector">Area <span>(optional)</span></label>
+              <select id="sector" name="sector">
+                <option value="">Select an area</option>
+                <option>Education</option><option>Health</option><option>Jobs & business</option>
+                <option>Infrastructure</option><option>Environment</option><option>Youth</option>
+                <option>Safety</option><option>Public services</option><option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="privacy-note">
+            Your response is submitted as community feedback. Please do not include passwords, ID numbers, phone numbers or other private information.
+          </div>
+
+          <button class="primary-btn submit-btn" type="submit">Submit response <span>→</span></button>
+          <div id="formMessage" class="form-message" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="how wrap">
+      <div class="section-label">THE PILOT</div>
+      <h2>From noticing to community intelligence.</h2>
+      <div class="steps">
+        <div><b>01</b><strong>Notice</strong><span>People identify what they see and experience.</span></div>
+        <div><b>02</b><strong>Respond</strong><span>ZENORT captures structured community observations.</span></div>
+        <div><b>03</b><strong>Understand</strong><span>Responses can later be searched, grouped and analysed.</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <strong>ZENORT</strong>
+      <span>Community Publication • Pilot</span>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
 </body>
 </html>

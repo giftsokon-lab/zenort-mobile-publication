@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ZENORT — Community Publication</title>
+  <meta name="description" content="ZENORT listens to what people notice, understand and experience in their communities.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a class="logo" href="#">ZENORT</a>
+  <span>COMMUNITY PUBLICATION</span>
+</header>
+
+<main>
+  <section class="cover">
+    <div class="eyebrow">ZENORT • MOBILE PUBLICATION</div>
+    <h1>What needs attention?</h1>
+    <p class="lead">Every community has things people notice before institutions do.</p>
+    <a class="button" href="#publication">Read publication</a>
+  </section>
+
+  <article id="publication" class="publication">
+    <div class="eyebrow">ZENORT PUBLICATION</div>
+    <h2>Listening begins with noticing.</h2>
+    <p>A broken service. A promising idea. A place that needs attention. A problem affecting young people. A resource that could be used better.</p>
+    <p>ZENORT begins by listening.</p>
+    <p>This publication is part of a pilot exploring how people understand, experience and respond to issues around them.</p>
+    <p>There are no right answers. What matters is what you actually observe, think and experience.</p>
+
+    <div class="prompt">
+      <h2>Now tell ZENORT what you think.</h2>
+      <p>What is one thing in your community that needs attention, opportunity or understanding?</p>
+      <a class="button" href="#respond">Respond</a>
+    </div>
+  </article>
+
+  <section id="respond" class="card">
+    <div class="eyebrow">YOUR RESPONSE</div>
+    <h2>What do you think?</h2>
+    <p>There are no right answers. Tell us what you actually observe or experience.</p>
+    <form id="responseForm">
+      <textarea id="response" rows="7" required placeholder="Write your response..."></textarea>
+      <label class="check">
+        <input id="consent" type="checkbox" required>
+        I agree that this response may be used for the ZENORT pilot.
+      </label>
+      <button type="submit">Submit response</button>
+    </form>
+    <div id="result" aria-live="polite"></div>
+  </section>
+
+  <section class="card small">
+    <h2>About the pilot</h2>
+    <p>ZENORT is being tested with real people to understand how a community publication can listen, capture and learn from human response.</p>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
